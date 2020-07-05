@@ -33,7 +33,7 @@ jobs:
         with:
           command: build
           use-cross: startWith($${{ matrix.target }}, 'x86') != true
-          args: --release --locked --target=${{ matrix.target }}
+          args: --verbose --release --locked --target=${{ matrix.target }}
 
       - name: Package
         env:
