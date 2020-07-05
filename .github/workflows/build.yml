@@ -33,7 +33,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
-          use-cross: startWith($${{ matrix.target }}, 'x86')
+          use-cross: startWith($${{ matrix.target }}, 'arm')
           args: --verbose --release --locked --target=${{ matrix.target }}
 
       - name: Package
