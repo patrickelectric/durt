@@ -44,10 +44,3 @@ jobs:
           cp LICENSE $PACKAGE_NAME
           cp README.md $PACKAGE_NAME
           tar caf $PACKAGE_NAME.tar.gz $PACKAGE_NAME
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          files: durt-${{ matrix.target }}.tar.gz
