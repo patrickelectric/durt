@@ -25,7 +25,6 @@ jobs:
         with:
           toolchain: stable
           override: true
-          profile: minimal
           target: ${{ matrix.target }}
 
       - name: Build
