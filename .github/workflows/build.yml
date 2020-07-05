@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        run: |
-          echo "startWith($${{ matrix.target }}, 'x86')"
 
       - name: Setup
         uses: actions-rs/toolchain@v1
